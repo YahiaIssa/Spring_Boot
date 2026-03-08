@@ -1,12 +1,25 @@
-package java102;
+package Java102;
+
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+import javax.swing.JFrame;
 
 public class Main {
-    public static void main(String[] args){
-     A x=new A();
-     A y=new A(10);
-        System.out.println(x.val);
-        System.out.println(y.val);
-        B c=new B();
-        System.out.println(c.val);
+    public static void printOs(OS os)
+    {
+        os.printOsInfo();
+    }
+
+    public static void main(String[] args) {
+
+
+        Windows win7 = new Windows("7");
+        Mac lion = new Mac("Lion");
+        linex uponto = new linex("10","uponto");
+        win7.printOsInfo();
+        lion.printOsInfo();
+        uponto.printOsInfo();
+
     }
 }
