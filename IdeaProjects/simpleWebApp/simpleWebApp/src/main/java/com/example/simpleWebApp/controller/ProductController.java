@@ -20,7 +20,7 @@ public class ProductController {
     }
 
     // ميثود لإضافة منتج جديد (POST)
-    @PostMapping("/Products/{proid}")
+    @PostMapping("/Products")
     public List<Product> addProduct(@RequestBody Product product) {
         services.addProduct(product);
         return services.getProduct();
@@ -30,7 +30,7 @@ public class ProductController {
         services.updateProduct(product);
 
     }
-    @DeleteMapping("/Products/{proid}")
+    @DeleteMapping("/Products")
     public void deleteProduct(@PathVariable int proid) {
         services.deleteProduct(proid);
     }

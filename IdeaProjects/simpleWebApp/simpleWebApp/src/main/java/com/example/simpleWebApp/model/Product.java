@@ -1,11 +1,15 @@
 package com.example.simpleWebApp.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.springframework.stereotype.Component;
 
-@Data
-
+@Component
+@Entity
 public class Product {
+    @Id
     private int proid;
     private String productName;
     private int productPrice;
@@ -34,7 +38,7 @@ public class Product {
         this.productPrice = productPrice;
     }
 
-    public Product(int proid, String productName, int productPrice) {
+    public Product() {
         this.proid = proid;
         this.productName = productName;
         this.productPrice = productPrice;
